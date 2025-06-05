@@ -1,0 +1,137 @@
+[問1]　２進数、10進数、16進数の問題
+2進数、16進数は2の補数　10進数は符号付きで答える（10問）
+
+[問2]　bit演算
+符号なし
+計算したのを10進数に置き換えて解答
+
+1	2進数&2進数
+2	2進数|2進数
+3	2進数＾2進数
+4	16進数＆16進数
+5	16進数|16進数
+6	16進数＾16進数
+7	10進数&16進数
+8	10進数｜16進数
+9	16進数>>10進数
+10	10進数<<16進数
+
+[問3]　単位の表記
+1ｋbは1024バイトとする
+Hが付いているものは16進数
+
+1 1.25MB を KB へ変換
+2 KB を Bitへ変換
+3 64Bit を Byte へ変換
+4 2TB を MB へ変換
+5 8000000H Byte を MB へ変換
+
+[問4] 語群問題
+文章を読んで語群から関連する語句を選ぶ問題（15問）
+
+・対象のデータ同士を比較しないで行われるソート 
+・ツイッターやfacebook等の総称
+など
+
+
+[問5] プログラムの問題
+C言語
+選択肢から選択して解答
+秒secを分、時間、日に変換し、表示する関数についての問題
+1日に満たない場合は日の部分は表示しない
+1時間に満たない場合は時間の部分は表示しない
+1分に満たない場合は分の部分は表示しない
+void 関数名(int sec)
+{
+	int temp = ????;
+	int minute = temp % 60;
+	temp = temp / 60;
+	int hour = ????;
+	int day = temp / 24;
+
+	if(day > 0)
+	{
+		printf("%d日", day);
+	}
+	????
+	{
+		printf("%2d時間", hour);
+	}
+	????
+	{
+		printf("%2d分", minute);
+	}
+
+	printf("%2d秒", ????);
+}
+
+
+[問6] プログラムの問題
+C++
+選択肢から選択して解答
+継承とクラスポインタ、仮想メソッドについて
+実行結果通りになるよう空欄を埋める問題
+class Base
+{
+?????
+	Base()
+	{
+		strcpy_s( ????? , "Base");
+	}
+	?????? void dispName()
+	{
+		cout << m << endl;
+	}
+ 
+protected:
+	int Max_Value = 32;
+	char mName[Max_Value];
+};
+class ClassA : public Base
+{
+	void dispName()
+	{
+		?????;
+	}	
+};
+class ClassB : public Base
+{
+	ClassB()
+	{
+		?????;
+	}	
+};
+
+void change(???? ???? pBase, Base* next)
+{
+	delete pBase;
+	pBase = next;
+}
+
+void main()
+{
+	Base* pBase = ?????;
+	pBase->dispName();
+
+	change(pBase, new ClassB);
+	pBase->dispName();
+
+	change(pBase, new ClassC);
+	pBase->dispName();
+
+	????? pBase;
+}
+
+実行結果
+?????
+ClassB
+ClassC
+
+
+[問7] 数学（二次関数）
+7.1 原点（0，0）を通り、頂点が（2，4）の放物線の式を答えよ
+7.2 原点を通る直線において、傾きｍが正の直線について考える。
+　　放物線と交わるｍの値を求めよ
+7.3 傾きが１の直線が原点O以外で放物線と交わる時の点Pと
+　　放物線が原点O以外でX軸と交わるときの点Qとする。
+　　三角形OPQの面積を求めよ
